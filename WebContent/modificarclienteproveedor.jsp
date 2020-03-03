@@ -8,7 +8,7 @@
 </head>
 <body>
 <h1>Modificar la dirección del cliente / proveedor</h1>
-<h1>Modificar bbbb </h1>
+<h1>Modificar </h1>
 <div id="divformulario">
 	<%String mensaje=(String) request.getAttribute("mensaje"); %>
 	<%=mensaje %>
