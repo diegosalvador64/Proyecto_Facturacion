@@ -13,6 +13,8 @@
 <a href="pedido.jsp">Pedidos</a>
 <br>
 <a href="servicios.jsp">Servicios</a>
+
+hola
 <br>
 </body>
 </html>
