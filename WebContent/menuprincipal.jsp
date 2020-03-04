@@ -10,7 +10,9 @@
 <h1>Facturación</h1>
 <a href="clienteproveedor.jsp">Cliente Proveedor</a>
 <br>
-<a href="pedido.jsp">Cliente Proveedor</a>
+<a href="pedido.jsp">Pedidos</a>
+<br>
+<a href="servicios.jsp">Servicios</a>
 <br>
 </body>
 </html>
