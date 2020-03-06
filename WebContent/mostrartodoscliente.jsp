@@ -7,10 +7,10 @@
 <head>
 <meta charset="ISO-8859-1">
 <link rel="stylesheet" href="estilos/estilos.css" type="text/css">
-<title>Insert title here</title>
+<title>Mostrar todos los clientes/proveedores</title>
 </head>
 <body>
-<p> Nuestros clientes / proveedores son:</p>
+<h1> Nuestros clientes / proveedores son:</h1>
 <!--  usar un scriplet para recoger los productos que están en el ámbito request -->
 <% ArrayList<ClienteProveedor> jsptodos = (ArrayList<ClienteProveedor>) request.getAttribute("rtodos");%>
 <table>

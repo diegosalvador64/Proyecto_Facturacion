@@ -4,16 +4,17 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Menu principal</title>
+<title>Contratos</title>
 <link rel="stylesheet" href="estilos/estilos.css" type="text/css">
 </head>
 <body>
-<h1>Menú de Facturación</h1>
+<h1>Tratamiento Contratos</h1>
+<br>
 <ul>
-<li><a href="clienteproveedor.jsp">Clientes/Proveedores</a></li>
-<li><a href="pedido.jsp">Pedidos</a></li>
-<li><a href="servicios.jsp">Servicios</a></li>
-<li><a href="contratos.jsp">Contratos</a></li>
+<li><a href="pediruncontrato.jsp">Mostrar un Contrato</a></li>
+<li><a href="servletcontrato?op=2">Mostrar todos los Contratos</a></li>
+<li><a href="insertarcontrato.jsp">Insertar un contrato</a></li>
+<br>
 </ul>
 </body>
 </html>

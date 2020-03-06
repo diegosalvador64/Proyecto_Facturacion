@@ -4,26 +4,25 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<title>Pedir un contrato</title>
 <link rel="stylesheet" href="estilos/estilos.css" type="text/css">
-<title>Mostrar un cliente</title>
 </head>
 <body>
 <!--  usando beans 
 1. Clase encapsulada
 2. Que implemente la interfaz Serializable
 3. Que tenga un constructor vacio Hola Hola holita-->
-<h1>Busque el cliente/proveedor que desea</h1>
-
+<h1>Busque el Contrato que desea</h1>
 <% if (request.getParameter("id")!=null) {%>
-<jsp:useBean id ="cp1" scope="request" class="com.vipper.modelo.ClienteProveedor"/>
-<jsp:setProperty name="cp1" property="*"/>
-<jsp:forward page="servletfacturacion?op=1"/>
+<jsp:useBean id ="c1" scope="request" class="com.vipper.modelo.Contratos"/>
+<jsp:setProperty name="c1" property="*"/>
+<jsp:forward page="servletcontrato?op=1"/>
 <%} %>
-<form action="mostrarunocliente.jsp" method ="post">
-<h3>Cliente/Proveedor:</h3><input type="text" name="id"/>
+<form action="pediruncontrato.jsp" method ="post">
+<h3>Contrato:</h3><br><input type="text" name="id"/>
 <br>
 <br>
-<input type="submit" value="Buscar Cliente/Proveedor"/>
+<input type="submit" value="Buscar Contrato"/>
 </form>
 </body>
 </html>

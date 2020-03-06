@@ -4,26 +4,25 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<title>Pedir un servicio</title>
 <link rel="stylesheet" href="estilos/estilos.css" type="text/css">
-<title>Mostrar un cliente</title>
 </head>
 <body>
 <!--  usando beans 
 1. Clase encapsulada
 2. Que implemente la interfaz Serializable
 3. Que tenga un constructor vacio Hola Hola holita-->
-<h1>Busque el cliente/proveedor que desea</h1>
-
+<h1>Busque el servicio que desea</h1>
 <% if (request.getParameter("id")!=null) {%>
-<jsp:useBean id ="cp1" scope="request" class="com.vipper.modelo.ClienteProveedor"/>
-<jsp:setProperty name="cp1" property="*"/>
-<jsp:forward page="servletfacturacion?op=1"/>
+<jsp:useBean id ="s1" scope="request" class="com.vipper.modelo.Servicio"/>
+<jsp:setProperty name="s1" property="*"/>
+<jsp:forward page="servletservicio?op=1"/>
 <%} %>
-<form action="mostrarunocliente.jsp" method ="post">
-<h3>Cliente/Proveedor:</h3><input type="text" name="id"/>
+<form action="pedirunservicio.jsp" method ="post">
+<h3>Servicio:</h3><br><input type="text" name="id"/>
 <br>
 <br>
-<input type="submit" value="Buscar Cliente/Proveedor"/>
+<input type="submit" value="Buscar Servicio"/>
 </form>
 </body>
 </html>
