@@ -148,7 +148,7 @@ public class ServletFacturacion extends HttpServlet {
 					r.setAttribute("mensaje", "Se ha borrado el registro");
 				} else {
 					System.out.println("¡Ops! Ha habido algún error. Lo sentimos");
-					r.setAttribute("mensaje", "No se ha boorado el registro");
+					r.setAttribute("mensaje", "No se ha borrado el registro");
 				}
 				
 				
@@ -185,7 +185,8 @@ public class ServletFacturacion extends HttpServlet {
 					response.addCookie(miCookie);
 					rd.forward(r, response);
 				} else {
-					rd = r.getRequestDispatcher("/registro.jsp");
+					rd = r.getRequestDispatcher("/index.jsp");
+					r.setAttribute("mensaje", "Usuario o contraseña errónea");
 					rd.forward(r, response);
 				}
 			} catch (ClassNotFoundException | SQLException e) {
