@@ -6,7 +6,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.vipper.modelo.Pedido;
 import com.vipper.modelo.Servicio;
 
 public class AccesoServicio extends Conexion {
