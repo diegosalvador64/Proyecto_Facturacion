@@ -16,8 +16,9 @@ public class Conexion {
 	    public void abrirConexion() throws ClassNotFoundException, SQLException {
 	        //Cargar el driver
 	        Class.forName("com.mysql.cj.jdbc.Driver");
-	        String stringConexion = "jdbc:mysql://localhost:3306/facturacion?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&autoReconnect=true&useSSL=false";
-	        miConexion = DriverManager.getConnection(stringConexion, "root", "Curso2019$");
+	        //En serverTimezone=Europe/Madrid lo pongo así para que inserte la fecha correctammnete desde un formulario con un campo formato Date
+	        String stringConexion = "jdbc:mysql://localhost:3306/facturacion?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Europe/Madrid&autoReconnect=true&useSSL=false";
+	        miConexion = DriverManager.getConnection(stringConexion, "root", "Curso2019$");   
 	        System.out.println("Exito al abrir la conexion");
 	    }
 

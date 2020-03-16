@@ -10,8 +10,7 @@
 <body>
 <h1>Insertar datos del servicio</h1>
 <div id="divformulario">
-	<%String mensaje=(String) request.getAttribute("mensaje"); %>
-	<%=mensaje %>
+	<h2><%= request.getAttribute("mensaje") != null ? request.getAttribute("mensaje") : "" %></h2>
 	<form action="servletservicio?op=3" autocomplete="off" method="post">
 		
 		<label for="descripcion"><span class="campolabel">Descripción </span><span class="rojo">*</span></label>
@@ -19,14 +18,20 @@
 		<input type="text" name="descripcion" required placeholder="" title="Rellene el campo"><br>
 		<label for="direccion"><span class="campolabel">Coste </span><span class="rojo">*</span></label>
 		<br>
-		<input type="text" name="coste" required placeholder="" title="Rellene el campo"><br>
+		<input type="number" name="coste" required placeholder="" title="Rellene el campo"><br>
 		<label for="id"><span class="campolabel">Identificador Cliente/Proveedor </span><span class="rojo">*</span></label>
 		<br>
-		<input type="text" name="id" required placeholder="" title="Introduzca un id cliente/proveedor válido"> <br>
+		<input type="number" name="id" required placeholder="" title="Introduzca un id cliente/proveedor válido"> <br>
 		<label for="iva"><span class="campolabel">IVA </span><span class="rojo">*</span></label>
 		<br>
-		<input type="text" name="iva" required placeholder="" title="Los IVAS correctos son 4, 10, 15, 21%"> <br>
-				
+		<br>
+		<select name="iva" class="campolabel">
+		<option value="4">4% - Superreducido</option>
+		<option value="10">10% - Reducido</option>
+		<option value="15">15% - Normal</option>
+		<option value="21">21% - Cultural</option>
+		</select>
+		<br>
 		<input name="aceptarterminos" type="checkbox" required id="aceptarterminos" value=""><span id="terminos">Acepto los términos y condiciones de privacidad</span> <br>
 		<input type="submit" value="Enviar">
 	</form>

@@ -5,6 +5,8 @@ import java.sql.SQLException;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.Cookie;
@@ -30,6 +32,22 @@ public class ServletFacturacion extends HttpServlet {
     public ServletFacturacion() {
         super();
         // TODO Auto-generated constructor stub
+    }
+  //Método init para hacer cosas al ejecutarse la primera vez, que 
+    //en este caso es recoger el parámetro inicial que hemos metido
+    //en web.xml entre las etiquetas <init-param>
+    @Override
+    public void init(ServletConfig config) throws ServletException {
+    	// TODO Auto-generated method stub
+    	//Recuperar el parámetro inicial del web.xml que se llama "mensaje"
+    	String jmensaje = config.getServletContext().getInitParameter("mensaje");
+    	System.out.println("mensaje --> " + jmensaje);
+    	//Recuperar el ámbito de la aplicación
+    	ServletContext af1 = config.getServletContext();
+    	//Guardamos aquí el mensaje. amensaje es un nombre nuevo de clave
+    	//válido para todas las sesiones
+    	af1.setAttribute("amensaje", jmensaje);
+    	super.init(config);
     }
 
 	/**
@@ -120,8 +138,9 @@ public class ServletFacturacion extends HttpServlet {
 			try {
 			af1 = new AccesoFacturacion();
 			numregistros = af1.modificarClienteProveedor(Integer.parseInt(r.getParameter("id")), r.getParameter("direccion"));
+			System.out.println("numregistros " + numregistros);
 			if (numregistros > 0) {
-				System.out.println("Se ha dado de alta el registro en nuestra BBDD ");
+				System.out.println("Se ha modificado el registro en nuestra BBDD ");
 				r.setAttribute("mensaje", "Se ha modificado el registro");
 			} else {
 				System.out.println("¡Ops! Ha habido algún error. Lo sentimos");
@@ -129,7 +148,6 @@ public class ServletFacturacion extends HttpServlet {
 			}
 			//Redirigir a la página mostrartodos.jsp
 			rd = r.getRequestDispatcher("/modificarclienteproveedor.jsp");
-			r.setAttribute("mensaje", "Se ha modificado el registro");
 			rd.forward(r, response);
 			} catch (ClassNotFoundException | SQLException e) {
 			// TODO Auto-generated catch block

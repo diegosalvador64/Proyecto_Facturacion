@@ -50,7 +50,7 @@ public class ServletContrato extends HttpServlet {
 			jContratos =  (Contratos) r.getAttribute("c1"); //hacemos casting
 			ac1=new AccesoContratos();
 			try {
-				jContratos = ac1.mostrarUnContrato(jContratos.getId());
+				jContratos = ac1.mostrarUnContrato(jContratos.getIdcontrato());
 				System.out.println("Un Contrato de la BBDD" + jContratos.valueOf());
 			} catch (ClassNotFoundException | SQLException e) {
 				// TODO Auto-generated catch block

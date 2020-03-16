@@ -13,13 +13,13 @@
 2. Que implemente la interfaz Serializable
 3. Que tenga un constructor vacio Hola Hola holita-->
 <h1>Busque el servicio que desea</h1>
-<% if (request.getParameter("id")!=null) {%>
+<% if (request.getParameter("idservicios")!=null) {%>
 <jsp:useBean id ="s1" scope="request" class="com.vipper.modelo.Servicio"/>
 <jsp:setProperty name="s1" property="*"/>
 <jsp:forward page="servletservicio?op=1"/>
 <%} %>
 <form action="pedirunservicio.jsp" method ="post">
-<h3>Servicio:</h3><br><input type="text" name="id"/>
+<h3>Servicio:</h3><br><input type="number" name="idservicios"/>
 <br>
 <br>
 <input type="submit" value="Buscar Servicio"/>

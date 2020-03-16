@@ -9,7 +9,6 @@
 </head>
 <body>
 <h1>Registro de borrado</h1>
-<%String mensaje=(String) request.getAttribute("mensaje"); %>
-	<%=mensaje %>
+<h2><%= request.getAttribute("mensaje") != null ? request.getAttribute("mensaje") : "" %></h2>
 </body>
 </html>

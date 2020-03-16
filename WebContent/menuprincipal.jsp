@@ -11,9 +11,10 @@
 <h1>Menú de Facturación</h1>
 <ul>
 <li><a href="clienteproveedor.jsp">Clientes/Proveedores</a></li>
-<li><a href="pedido.jsp">Pedidos</a></li>
+<li><a href="pedidos.jsp">Pedidos</a></li>
 <li><a href="servicios.jsp">Servicios</a></li>
 <li><a href="contratos.jsp">Contratos</a></li>
+<li><a href="formaspago.jsp">Formas de Pago</a></li>
 </ul>
 </body>
 </html>

@@ -51,9 +51,10 @@ public class ServletServicio extends HttpServlet {
 			//Aquí entrará al pinchar desde la pantalla pedirunservicio, a cuyo usebean se 
 			//ha identificado como "s1". Recoge el atributo desde el ámbito ¿Aplicación o sesión?
 			jservicio =  (Servicio) r.getAttribute("s1"); //hacemos casting
+			
 			as1=new AccesoServicio();
 			try {
-				jservicio = as1.mostrarUnServicio(jservicio.getId());
+				jservicio = as1.mostrarUnServicio(jservicio.getIdservicios());
 				System.out.println("Un servicio de la BBDD" + jservicio.valueOf());
 			} catch (ClassNotFoundException | SQLException e) {
 				// TODO Auto-generated catch block

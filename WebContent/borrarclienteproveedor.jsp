@@ -22,7 +22,7 @@
 <form action="borrarclienteproveedor.jsp" method ="post">
 <h3>Cliente/Proveedor:</h3>
 <br>
-<input type="text" name="id"/><br><br>
+<input type="number" name="id"/><br><br>
 <input type="submit" value="Borrar Cliente/Proveedor"/>
 </form>
 </body>

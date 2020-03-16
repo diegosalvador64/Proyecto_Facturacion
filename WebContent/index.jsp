@@ -11,8 +11,9 @@
 <h1>Menú principal de Facturación</h1>
 	
 <div class="flex1">
-	<h2><%String mensaje=(String) request.getAttribute("mensaje"); %>
-	<%=mensaje %></h2>
+	
+		<h2><%= request.getAttribute("mensaje") != null ? request.getAttribute("mensaje") : "" %></h2>
+	
 		<!--  <div class="contenedor-imagenes">
 				<div class="imagen"><img src="img/img_avatar.png" alt="avatar"></div>
 				<div class="times">&times;</div>
