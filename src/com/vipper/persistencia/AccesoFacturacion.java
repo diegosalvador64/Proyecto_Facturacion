@@ -7,10 +7,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.vipper.modelo.ClienteProveedor;
+import com.vipper.modelo.ExcepcionUno;
 
 public class AccesoFacturacion extends Conexion {
 
-	public List<ClienteProveedor> mostrartodosclientes() throws ClassNotFoundException, SQLException {
+	public List<ClienteProveedor> mostrartodosclientes() throws ClassNotFoundException, SQLException { 
 		// Definir las variables
 		String sql = "call mostrartodoclientesproveedor();";
 		List<ClienteProveedor> todos = new ArrayList<ClienteProveedor>();
@@ -48,7 +49,7 @@ public class AccesoFacturacion extends Conexion {
 	}
 	// Añadimos el método mostrar uno
 
-	public ClienteProveedor mostrarUnoCliente(int id) throws SQLException, ClassNotFoundException {
+	public ClienteProveedor mostrarUnoCliente(int id) throws ExcepcionUno, SQLException, ClassNotFoundException {
 		// Definir las variables
 		String sql = "call mostraunoclienteproveedor(?);";
 		ClienteProveedor uno = null;
@@ -70,15 +71,19 @@ public class AccesoFacturacion extends Conexion {
 
 		rs = st.executeQuery();
 		// Recorrer el ResultSet para crear la colección
+		int num=0;
 
 		if (rs.next()) {
 			uno = new ClienteProveedor(rs.getInt("id"), rs.getString("NIF"), rs.getString("nombre"),
 					rs.getString("direccion"), rs.getString("tipo"), rs.getString("email"), rs.getString("telefono"));
-
+			num++;
 		}
-
+		//Comprobar si se recibe algún registro
+		System.out.println("El número de registros es " + num);
+		if (num==0) {
+			throw new ExcepcionUno("No hay un jodido registro para este id");
+		}
 		// cerrar conexión
-
 		cerrarConexion();
 
 		return uno;

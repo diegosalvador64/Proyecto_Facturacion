@@ -18,7 +18,9 @@
 		<input type="text" name="descripcion" required placeholder="" title=""> <br>
 		<label for="valor"><span class="campolabel">Valor </span><span class="rojo">*</span></label>
 		<br>
-		<input type="number" name="valor" required placeholder="" title=""> <br>
+		<input type="number" name="valor" required placeholder="" title=""> 
+		<br>
+		<br>
 		<input name="aceptarterminos" type="checkbox" required id="aceptarterminos" value=""><span id="terminos">Acepto los términos y condiciones de privacidad</span> <br>
 		<input type="submit" value="Enviar">
 	</form>	

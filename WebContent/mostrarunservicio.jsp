@@ -11,16 +11,18 @@
 
 <jsp:useBean id="s1" class="com.vipper.modelo.Servicio" scope="request"/>
 <h1>Datos del servicio</h1>
-<ul>
-<li>Id Servicio: <%=s1.getIdservicios() %></li>
+<h2 class="mostraruno"><%= request.getAttribute("mensaje") != null ? request.getAttribute("mensaje") : "" %></h2>
 <br>
-<li>Descripción: <%=s1.getDescripcion() %></li>
+<ul class="mostraruno">
+<li><strong>Id Servicio: </strong><%=s1.getIdservicios() %></li>
 <br>
-<li>Coste      : <%=s1.getCoste() %></li>
+<li><strong>Descripción: </strong><%=s1.getDescripcion() != null ? s1.getDescripcion() : "" %></li>
 <br>
-<li>Id Cliente : <%=s1.getId() %></li>
+<li><strong>Coste      : </strong><%=s1.getCoste() %></li>
 <br>
-<li>IVA        : <%=s1.getIva() %></li>
+<li><strong>Id Cliente : </strong><%=s1.getId() %></li>
+<br>
+<li><strong>IVA        : </strong><%=s1.getIva() %></li>
 <br>
 </ul>
 </body>

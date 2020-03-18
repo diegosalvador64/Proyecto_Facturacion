@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.vipper.modelo.Contratos;
+import com.vipper.modelo.ExcepcionUno;
 
 public class AccesoContratos extends Conexion {
 	
@@ -51,7 +52,7 @@ public class AccesoContratos extends Conexion {
 	}
 	// Añadimos el método mostrar uno
 
-	public Contratos mostrarUnContrato(int id) throws SQLException, ClassNotFoundException {
+	public Contratos mostrarUnContrato(int id) throws ExcepcionUno, SQLException, ClassNotFoundException {
 		// Definir las variables
 		String sql = "call mostraruncontrato(?);";
 		Contratos uno = null;
@@ -73,6 +74,8 @@ public class AccesoContratos extends Conexion {
 
 		rs = st.executeQuery();
 		// Recorrer el ResultSet para crear la colección
+		
+		int num=0;
 
 		if (rs.next()) {
 			uno = new Contratos(
@@ -80,8 +83,13 @@ public class AccesoContratos extends Conexion {
 					rs.getInt("id_proveedor"), 
 					rs.getDouble("comision"),
 					rs.getString("encargado_facturacion"));
+			num++;
 		}
-	
+		//Comprobar si se recibe algún registro
+		System.out.println("El número de registros es " + num);
+		if (num==0) {
+			throw new ExcepcionUno("No hay un jodido registro para este id");
+		}
 
 		// cerrar conexión
 

@@ -10,25 +10,26 @@
 <body>
 <jsp:useBean id="p1" class="com.vipper.modelo.Pedidos" scope="request"/>
 <h1>Datos del Pedido</h1>
-
-<ul>
-<li>Id Pedido            : <%=p1.getIdpedido() %></li>
+<h2 class="mostraruno"><%= request.getAttribute("mensaje") != null ? request.getAttribute("mensaje") : "" %></h2>
 <br>
-<li>Descripción pedido  : <%=p1.getDescripcion() %></li>
+<ul class="mostraruno">
+<li><strong>Id Pedido            :</strong> <%=p1.getIdpedido() %></li>
 <br>
-<li>NIF Cliente/Proveedor: <%=p1.getNifClienteProveedor() %></li>
+<li><strong>Descripción pedido  :</strong> <%=p1.getDescripcion() != null ? p1.getDescripcion() : "" %></li>
 <br>
-<li>Forma de pago        : <%=p1.getDescripcionFormaPago() %></li>
+<li><strong>NIF Cliente/Proveedor:</strong> <%=p1.getNifClienteProveedor() != null ? p1.getNifClienteProveedor() : "" %></li>
 <br>
-<li>Total                : <%=p1.getTotal() %></li>
+<li><strong>Forma de pago        :</strong> <%=p1.getDescripcionFormaPago() != null ? p1.getDescripcionFormaPago() : "" %></li>
 <br>
-<li>Fecha                : <%=p1.getFecha() %></li>
+<li><strong>Total                :</strong> <%=p1.getTotal() %></li>
 <br>
-<li>Servicio             : <%=p1.getDescripcionServicios() %></li>
+<li><strong>Fecha                :</strong> <%=p1.getFecha() != null ? p1.getFecha() : "" %></li>
 <br>
-<li>Id Contrato          : <%=p1.getIdcontrato() %></li>
+<li><strong>Servicio             :</strong> <%=p1.getDescripcionServicios() != null ? p1.getDescripcionServicios() : "" %></li>
 <br>
-<li>Importe facturado    : <%=p1.getImporte_facturado() %></li>
+<li><strong>Id Contrato          :</strong> <%=p1.getIdcontrato() %></li>
+<br>
+<li><strong>Importe facturado    :</strong> <%=p1.getImporte_facturado() %></li>
 <br>
 </ul>
 </body>

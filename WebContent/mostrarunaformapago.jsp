@@ -10,12 +10,14 @@
 <body>
 <jsp:useBean id="fp1" class="com.vipper.modelo.FormasPago" scope="request"/>
 <h1>Datos de la forma de pago</h1>
-<ul>
-<li>Id Forma de Pago: <%=fp1.getIdformapago() %></li>
+<h2 class="mostraruno"><%= request.getAttribute("mensaje") != null ? request.getAttribute("mensaje") : "" %></h2>
 <br>
-<li>Descripción     : <%=fp1.getDescripcion() %></li>
+<ul class="mostraruno">
+<li><b>Id Forma de Pago:</b> <%=fp1.getIdformapago() %></li>
 <br>
-<li>Valor           : <%=fp1.getValor() %></li>
+<li><b>Descripción     :</b> <%=fp1.getDescripcion() != null ? fp1.getDescripcion() : "" %></li>
+<br>
+<li><b>Valor           :</b> <%=fp1.getValor() %></li>
 <br>
 </ul>
 </body>

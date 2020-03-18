@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.vipper.modelo.ExcepcionUno;
 import com.vipper.modelo.Servicio;
 import com.vipper.modelo.Servicio;
 import com.vipper.persistencia.AccesoFacturacion;
@@ -56,7 +57,13 @@ public class ServletServicio extends HttpServlet {
 			try {
 				jservicio = as1.mostrarUnServicio(jservicio.getIdservicios());
 				System.out.println("Un servicio de la BBDD" + jservicio.valueOf());
-			} catch (ClassNotFoundException | SQLException e) {
+			} 
+			catch (ExcepcionUno e) { //Excepción personalizada para cuando no existen registros para el id 
+				// TODO Auto-generated catch block
+				System.out.println(e.toString());
+				r.setAttribute("mensaje", "El Id Servicio " + jservicio.getIdservicios() + " no existe");
+			}	
+			catch (ClassNotFoundException | SQLException e) {
 				// TODO Auto-generated catch block
 				System.out.println(e.toString());
 			}

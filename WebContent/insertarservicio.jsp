@@ -24,13 +24,13 @@
 		<input type="number" name="id" required placeholder="" title="Introduzca un id cliente/proveedor válido"> <br>
 		<label for="iva"><span class="campolabel">IVA </span><span class="rojo">*</span></label>
 		<br>
-		<br>
 		<select name="iva" class="campolabel">
 		<option value="4">4% - Superreducido</option>
 		<option value="10">10% - Reducido</option>
 		<option value="15">15% - Normal</option>
 		<option value="21">21% - Cultural</option>
 		</select>
+		<br>
 		<br>
 		<input name="aceptarterminos" type="checkbox" required id="aceptarterminos" value=""><span id="terminos">Acepto los términos y condiciones de privacidad</span> <br>
 		<input type="submit" value="Enviar">

@@ -27,6 +27,7 @@ body {
 	   	color: black;
 	
 	}
+	
 	h3 {
 	
 	  	font-size: 1.5em;
@@ -71,9 +72,16 @@ body {
 		  resize: none;
 		  border-radius: 5px;
 	}
+	.mostraruno {
+		width: 50%;
+		background-color: azure;
+		margin: 0 auto; /* centrar la página */
+		border: 1px solid grey;
+		
+	}
 	#divformulario {
 		width: 50%;
-		/*background-color: azure;*/
+		background-color: azure;
 		margin: 0 auto; /* centrar la página */
 		/*padding: 10px;
 		margin: 5px;*/

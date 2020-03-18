@@ -6,6 +6,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.vipper.modelo.ExcepcionUno;
 import com.vipper.modelo.FormasPago;
 
 public class AccesoFormasPago extends Conexion {
@@ -50,7 +51,7 @@ public class AccesoFormasPago extends Conexion {
 	}
 	// Añadimos el método mostrar uno
 
-	public FormasPago mostrarunaFormaPago(int idformapago) throws SQLException, ClassNotFoundException {
+	public FormasPago mostrarunaFormaPago(int idformapago) throws ExcepcionUno, SQLException, ClassNotFoundException {
 		// Definir las variables
 		String sql = "call mostrarunaformapago(?);";
 		FormasPago uno = null;
@@ -72,13 +73,23 @@ public class AccesoFormasPago extends Conexion {
 
 		rs = st.executeQuery();
 		// Recorrer el ResultSet para crear la colección
+		
+		int num=0;
 
 		if (rs.next()) {
 			uno = new FormasPago(
 					rs.getInt("idformapago"),
 					rs.getString("descripcion"), 
 					rs.getDouble("valor"));
+			num++;
 		}
+		
+		//Comprobar si se recibe algún registro
+		System.out.println("El número de registros es " + num);
+		if (num==0) {
+			throw new ExcepcionUno("No hay un jodido registro para este id");
+		}
+
 	
 
 		// cerrar conexión

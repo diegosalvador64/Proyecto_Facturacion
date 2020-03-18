@@ -6,6 +6,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.vipper.modelo.ExcepcionUno;
 import com.vipper.modelo.Servicio;
 
 public class AccesoServicio extends Conexion {
@@ -52,7 +53,7 @@ public class AccesoServicio extends Conexion {
 		}
 		// Añadimos el método mostrar uno
 
-		public Servicio mostrarUnServicio(int id) throws SQLException, ClassNotFoundException {
+		public Servicio mostrarUnServicio(int id) throws ExcepcionUno, SQLException, ClassNotFoundException {
 			// Definir las variables
 			String sql = "call mostrarunservicio(?);";
 			Servicio uno = null;
@@ -74,6 +75,8 @@ public class AccesoServicio extends Conexion {
 
 			rs = st.executeQuery();
 			// Recorrer el ResultSet para crear la colección
+			
+			int num=0;
 
 			if (rs.next()) {
 				uno = new Servicio(rs.getInt("idservicios"), 
@@ -81,8 +84,13 @@ public class AccesoServicio extends Conexion {
 						rs.getDouble("coste"),
 						rs.getInt("id"), 
 						rs.getDouble("iva"));
+				num++;
 			}
-		
+			//Comprobar si se recibe algún registro
+			System.out.println("El número de registros es " + num);
+			if (num==0) {
+				throw new ExcepcionUno("No hay un jodido registro para este id");
+			}
 
 			// cerrar conexión
 

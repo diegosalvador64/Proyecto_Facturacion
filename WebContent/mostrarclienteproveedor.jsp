@@ -10,20 +10,23 @@
 <body>
 <jsp:useBean id="cp1" class="com.vipper.modelo.ClienteProveedor" scope="request"/>
 <h1>Datos del Cliente/proveedor</h1>
-<ul>
-<li>Id       : <%=cp1.getId() %></li>
+<h2 class="mostraruno"><%= request.getAttribute("mensaje") != null ? request.getAttribute("mensaje") : "" %></h2>
 <br>
-<li>NIF      : <%=cp1.getNif() %></li>
+<ul class="mostraruno">
+<li><b>Id       :</b> <%=cp1.getId() %></li>
 <br>
-<li>Nombre   : <%=cp1.getNombre() %></li>
+<li><b>NIF      :</b> <%=cp1.getNif() != null ? cp1.getNif() : "" %></li>
 <br>
-<li>Dirección: <%=cp1.getDireccion() %></li>
+<li><b>Nombre   :</b> <%=cp1.getNombre() != null ? cp1.getNombre() : "" %></li>
 <br>
-<li>Tipo     : <%=cp1.getTipo() %></li>
+<li><b>Dirección:</b> <%=cp1.getDireccion() != null ? cp1.getDireccion() : "" %></li>
 <br>
-<li>Email    : <%=cp1.getEmail() %></li>
+<li><b>Tipo     :</b> <%=cp1.getTipo() != null ? cp1.getTipo() : "" %></li>
 <br>
-<li>Teléfono : <%=cp1.getTelefono() %></li>
+<li><b>Email    :</b> <%=cp1.getEmail() != null ? cp1.getEmail() : "" %></li>
+<br>
+<li><b>Teléfono :</b> <%=cp1.getTelefono() != null ? cp1.getTelefono() : "" %></li>
 </ul>
+
 </body>
 </html>

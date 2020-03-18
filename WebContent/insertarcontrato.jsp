@@ -24,7 +24,9 @@
 		<select name="encargadofacturacion" class="campolabel">
 		<option value="E">Encargado de facturación</option>
 		<option value="C">El propio Cliente</option>
-		</select> <br>		
+		</select> 
+		<br>	
+		<br>	
 		<input name="aceptarterminos" type="checkbox" required id="aceptarterminos" value=""><span id="terminos">Acepto los términos y condiciones de privacidad</span> <br>
 		<input type="submit" value="Enviar">
 	</form>	

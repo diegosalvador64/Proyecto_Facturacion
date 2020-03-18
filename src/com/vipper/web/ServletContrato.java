@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.vipper.modelo.Contratos;
+import com.vipper.modelo.ExcepcionUno;
 import com.vipper.persistencia.AccesoContratos;
 
 /**
@@ -52,10 +53,16 @@ public class ServletContrato extends HttpServlet {
 			try {
 				jContratos = ac1.mostrarUnContrato(jContratos.getIdcontrato());
 				System.out.println("Un Contrato de la BBDD" + jContratos.valueOf());
-			} catch (ClassNotFoundException | SQLException e) {
+			} 
+			catch (ExcepcionUno e) {//Excepción personalizada para cuando no existen registros para el id 
 				// TODO Auto-generated catch block
 				System.out.println(e.toString());
+				r.setAttribute("mensaje", "El Id Contrato " + jContratos.getIdcontrato() + " no existe");
 			}
+			catch (ClassNotFoundException | SQLException e) {
+				// TODO Auto-generated catch block
+				System.out.println(e.toString());
+			} 
 			//Se guarda el producto con los datos que se obtienen de la BBDD
 			//en el ámbito request
 			r.setAttribute("c1", jContratos);

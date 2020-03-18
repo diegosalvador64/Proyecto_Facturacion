@@ -10,14 +10,16 @@
 <body>
 <jsp:useBean id="c1" class="com.vipper.modelo.Contratos" scope="request"/>
 <h1>Datos del contrato</h1>
-<ul>
-<li>Id Contrato          : <%=c1.getIdcontrato() %></li>
+<h2 class="mostraruno"><%= request.getAttribute("mensaje") != null ? request.getAttribute("mensaje") : "" %></h2>
 <br>
-<li>Id Cliente/Proveedor : <%=c1.getId() %></li>
+<ul class="mostraruno">
+<li><strong>Id Contrato          :</strong> <%=c1.getIdcontrato() %></li>
 <br>
-<li>Comisión             : <%=c1.getComision() %></li>
+<li><strong>Id Cliente/Proveedor :</strong> <%=c1.getId() %></li>
 <br>
-<li>Encargado facturación: <%=c1.getEncargadofacturacion() %></li>
+<li><strong>Comisión             :</strong> <%=c1.getComision() %></li>
+<br>
+<li><strong>Encargado facturación:</strong> <%=c1.getEncargadofacturacion() != null ? c1.getEncargadofacturacion() : "" %></li>
 <br>
 </ul>
 </body>

@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.vipper.modelo.ClienteProveedor;
+import com.vipper.modelo.ExcepcionUno;
 import com.vipper.persistencia.AccesoFacturacion;
 
 
@@ -70,10 +71,17 @@ public class ServletFacturacion extends HttpServlet {
 			try {
 				jclienteproveedor = af1.mostrarUnoCliente(jclienteproveedor.getId());
 				System.out.println("Un cliente-proveedor de la BBDD" + jclienteproveedor.valueOf());
-			} catch (ClassNotFoundException | SQLException e) {
+			} catch (ExcepcionUno e) {//Excepción personalizada para cuando no existen registros para el id
 				// TODO Auto-generated catch block
 				System.out.println(e.toString());
-			}
+				r.setAttribute("mensaje", "El Cliente/Proveedor " + jclienteproveedor.getId() + " no existe");
+			}	
+			
+			catch (ClassNotFoundException | SQLException e) {
+				// TODO Auto-generated catch block
+				System.out.println(e.toString());
+			} 
+			
 			//Se guarda el producto con los datos que se obtienen de la BBDD
 			//en el ámbito request
 			r.setAttribute("cp1", jclienteproveedor);
