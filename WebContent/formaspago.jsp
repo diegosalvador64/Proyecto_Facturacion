@@ -14,7 +14,8 @@
 <li><a href="pedirunaformapago.jsp">Mostrar una forma de pago</a></li>
 <li><a href="servletformaspago?op=2">Mostrar todas las formas de pago</a></li>
 <li><a href="insertarformapago.jsp">Insertar una forma de pago</a></li>
-<br>
+<br><br>
+<li><a href="menuprincipal.jsp">Menú principal</a></li>
 </ul>
 </body>
 </html>

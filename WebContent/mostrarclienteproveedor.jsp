@@ -27,6 +27,9 @@
 <br>
 <li><b>Teléfono :</b> <%=cp1.getTelefono() != null ? cp1.getTelefono() : "" %></li>
 </ul>
-
+<br>
+<a href="clienteproveedor.jsp">Menú Cliente-Proveedor</a>
+<br>
+<a href="menuprincipal.jsp">Menú principal</a>
 </body>
 </html>

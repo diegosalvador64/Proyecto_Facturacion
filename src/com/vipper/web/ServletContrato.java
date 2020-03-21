@@ -109,12 +109,14 @@ public class ServletContrato extends HttpServlet {
 				numregistros = ac1.insertarContrato(c1);
 				if (numregistros > 0) {
 					System.out.println("Se ha dado de alta el registro en nuestra BBDD ");
+					r.setAttribute("mensaje", "Su contrato ha sido dado de alta");
 				} else {
 					System.out.println("¡Ops! Ha habido algún error. Lo sentimos");
+					r.setAttribute("mensaje", "Su contrato no se ha podido dar de alta");
 				}
 				//Redirigir a la página insertarContratos.jsp
 				rd = r.getRequestDispatcher("/insertarcontrato.jsp");
-				r.setAttribute("mensaje", "Su alta ha sido exitosa");
+				
 				rd.forward(r, response);
 			} catch (ClassNotFoundException | SQLException e) {
 				// TODO Auto-generated catch block

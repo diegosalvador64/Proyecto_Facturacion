@@ -20,5 +20,9 @@
 <li><b>Valor           :</b> <%=fp1.getValor() %></li>
 <br>
 </ul>
+<br>
+	<a href="formaspago.jsp">Menú Formas de Pago</a>
+	<br>
+	<a href="menuprincipal.jsp">Menú principal</a>
 </body>
 </html>

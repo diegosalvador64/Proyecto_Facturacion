@@ -15,6 +15,8 @@
 <li><a href="insertarcliente.jsp">Insertar un cliente-proveedor</a></li>
 <li><a href="modificarclienteproveedor.jsp">Modificar un cliente-proveedor</a></li>
 <li><a href="borrarclienteproveedor.jsp">Borrar un cliente-proveedor</a></li>
+<br><br>
+<li><a href="menuprincipal.jsp">Menú principal</a></li>
 </ul>
 </body>
 </html>

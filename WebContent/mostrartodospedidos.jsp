@@ -43,5 +43,9 @@
 
 <%} %>
 
+<br>
+<a href="pedidos.jsp">Menú Pedidos</a>
+<br>
+<a href="menuprincipal.jsp">Menú principal</a>
 </body>
 </html>

@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="estilos/estilos.css" type="text/css">
 </head>
 <body>
-<h1>Insertar datos del servicio</h1>
+<h1>Insertar datos del contrato</h1>
 <div id="divformulario">
 	<h2><%= request.getAttribute("mensaje") != null ? request.getAttribute("mensaje") : "" %></h2>
 	<form action="servletcontrato?op=3" autocomplete="off" method="post">
@@ -30,6 +30,10 @@
 		<input name="aceptarterminos" type="checkbox" required id="aceptarterminos" value=""><span id="terminos">Acepto los términos y condiciones de privacidad</span> <br>
 		<input type="submit" value="Enviar">
 	</form>	
+	<br>
+	<a href="contratos.jsp">Menú Contratos</a>
+	<br>
+	<a href="menuprincipal.jsp">Menú principal</a>
 	</div>	
 </body>
 </html>

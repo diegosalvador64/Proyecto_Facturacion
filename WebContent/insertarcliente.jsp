@@ -42,7 +42,10 @@
 		<br>
 		<input type="submit" value="Enviar">
 	</form>
-	
+	<br>
+	<a href="clienteproveedor.jsp">Menú Cliente-Proveedor</a>
+	<br>
+	<a href="menuprincipal.jsp">Menú principal</a>
 	
 	</div>	
 </body>

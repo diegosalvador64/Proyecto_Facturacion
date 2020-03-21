@@ -14,7 +14,8 @@
 <li><a href="pedirunpedido.jsp">Mostrar un Pedido</a></li>
 <li><a href="servletpedido?op=2">Mostrar todos los Pedidos</a></li>
 <li><a href="insertarpedido.jsp">Insertar un pedido</a></li>
-<br>
+<br><br>
+<li><a href="menuprincipal.jsp">Menú principal</a></li>
 </ul>
 </body>
 </html>

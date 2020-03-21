@@ -34,5 +34,10 @@
 </tr>
 
 <%} %>
+
+<br>
+<a href="servicios.jsp">Menú Servicios</a>
+<br>
+<a href="menuprincipal.jsp">Menú principal</a>
 </body>
 </html>

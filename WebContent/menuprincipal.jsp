@@ -15,6 +15,9 @@
 <li><a href="servicios.jsp">Servicios</a></li>
 <li><a href="contratos.jsp">Contratos</a></li>
 <li><a href="formaspago.jsp">Formas de Pago</a></li>
+<li><a href="facturas.jsp">Facturas</a></li>
+<br>
+<li><a href="index.jsp">Inicio</a></li>
 </ul>
 </body>
 </html>

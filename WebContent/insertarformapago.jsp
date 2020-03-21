@@ -24,6 +24,10 @@
 		<input name="aceptarterminos" type="checkbox" required id="aceptarterminos" value=""><span id="terminos">Acepto los términos y condiciones de privacidad</span> <br>
 		<input type="submit" value="Enviar">
 	</form>	
+	<br>
+	<a href="formaspago.jsp">Menú Formas de Pago</a>
+	<br>
+	<a href="menuprincipal.jsp">Menú principal</a>
 	</div>	
 </body>
 </html>

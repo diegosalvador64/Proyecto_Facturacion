@@ -32,5 +32,8 @@
 <li><strong>Importe facturado    :</strong> <%=p1.getImporte_facturado() %></li>
 <br>
 </ul>
+<a href="pedidos.jsp">Menú Pedidos</a>
+	<br>
+	<a href="menuprincipal.jsp">Menú principal</a>
 </body>
 </html>

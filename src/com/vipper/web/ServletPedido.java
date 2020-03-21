@@ -126,12 +126,14 @@ public class ServletPedido extends HttpServlet {
 				numregistros = ap1.insertarPedido(p1);
 				if (numregistros > 0) {
 					System.out.println("Se ha dado de alta el registro en nuestra BBDD ");
+					r.setAttribute("mensaje", "Su pedido ha sido dado de alta");
 				} else {
 					System.out.println("¡Ops! Ha habido algún error. Lo sentimos");
+					r.setAttribute("mensaje", "Su pedido no se ha podido dar de alta");
 				}
 				//Redirigir a la página insertarpedido.jsp
 				rd = r.getRequestDispatcher("/insertarpedido.jsp");
-				r.setAttribute("mensaje", "Su alta ha sido exitosa");
+				
 				rd.forward(r, response);
 			} catch (ClassNotFoundException | SQLException e) {
 				// TODO Auto-generated catch block

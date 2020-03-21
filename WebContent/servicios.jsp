@@ -14,7 +14,8 @@
 <li><a href="pedirunservicio.jsp">Mostrar un Servicio</a></li>
 <li><a href="servletservicio?op=2">Mostrar todos los Servicios</a></li>
 <li><a href="insertarservicio.jsp">Insertar un servicio</a></li>
-<br>
+<br><br>
+<li><a href="menuprincipal.jsp">Menú principal</a></li>
 </ul>
 </body>
 </html>

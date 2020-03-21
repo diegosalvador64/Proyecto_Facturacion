@@ -22,5 +22,9 @@
 <li><strong>Encargado facturación:</strong> <%=c1.getEncargadofacturacion() != null ? c1.getEncargadofacturacion() : "" %></li>
 <br>
 </ul>
+<br>
+	<a href="contratos.jsp">Menú Contratos</a>
+	<br>
+	<a href="menuprincipal.jsp">Menú principal</a>
 </body>
 </html>
