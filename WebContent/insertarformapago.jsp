@@ -18,16 +18,18 @@
 		<input type="text" name="descripcion" required placeholder="" title=""> <br>
 		<label for="valor"><span class="campolabel">Valor </span><span class="rojo">*</span></label>
 		<br>
-		<input type="number" name="valor" required placeholder="" title=""> 
+		<input type="number" name="valor" min="1" step="0.05" required placeholder="0.00" title=""> 
 		<br>
 		<br>
 		<input name="aceptarterminos" type="checkbox" required id="aceptarterminos" value=""><span id="terminos">Acepto los términos y condiciones de privacidad</span> <br>
 		<input type="submit" value="Enviar">
+		<br>
+		<input type="reset" value="Limpiar">
 	</form>	
+	</div>
 	<br>
 	<a href="formaspago.jsp">Menú Formas de Pago</a>
 	<br>
-	<a href="menuprincipal.jsp">Menú principal</a>
-	</div>	
-</body>
+	<a href="menuprincipal.jsp">Menú principal</a>	
+	</body>
 </html>

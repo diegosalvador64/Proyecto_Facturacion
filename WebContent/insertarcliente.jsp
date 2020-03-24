@@ -18,7 +18,7 @@
 		<br>
 		<label for="nombre"><span class="campolabel">Nombre </span><span class="rojo">*</span></label>
 		<br>
-		<input type="text" name="nombre" required placeholder="" title="Rellene el campo"><br>
+		<input type="text" name="nombre" maxlength="20" required placeholder="" title="Rellene el campo"><br>
 		<label for="direccion"><span class="campolabel">Dirección </span><span class="rojo">*</span></label>
 		<br>
 		<input type="text" name="direccion" required placeholder="" title="Rellene el campo"><br>
@@ -35,18 +35,19 @@
 		placeholder="" title="Teclee un email válido"> <br>
 		<label for="telefono"><span class="campolabel">Teléfono </span><span class="rojo">*</span></label>
 		<br>
-		<input type="number" name="telefono" class="campolabel" required pattern="[0-9]{9}" placeholder="" title="Teclee un teléfono válido de 9 dígitos"> <br>
+		<input type="number" name="telefono" class="campolabel" min="1" max="999999999" required pattern="[0-9]{9}" placeholder="" title="Teclee un teléfono válido de 9 dígitos"> <br>
 		
 		<input name="aceptarterminos" type="checkbox" required id="aceptarterminos" value=""><span id="terminos">
 		Acepto los términos y condiciones de privacidad</span>
 		<br>
 		<input type="submit" value="Enviar">
-	</form>
-	<br>
+		<br>
+		<input type="reset" value="Limpiar">
+	</form>	
+	</div>
+	<br>	
 	<a href="clienteproveedor.jsp">Menú Cliente-Proveedor</a>
 	<br>
 	<a href="menuprincipal.jsp">Menú principal</a>
-	
-	</div>	
 </body>
 </html>

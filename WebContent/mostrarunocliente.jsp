@@ -20,10 +20,14 @@
 <jsp:forward page="servletfacturacion?op=1"/>
 <%} %>
 <form action="mostrarunocliente.jsp" method ="post">
-<h3>Cliente/Proveedor:</h3><input type="number" name="id"/>
+<h3>Cliente/Proveedor:</h3><input type="number" name="id" min="1"/>
 <br>
 <br>
 <input type="submit" value="Buscar Cliente/Proveedor"/>
 </form>
+<br>	
+	<a href="clienteproveedor.jsp">Menú Cliente-Proveedor</a>
+	<br>
+	<a href="menuprincipal.jsp">Menú principal</a>
 </body>
 </html>

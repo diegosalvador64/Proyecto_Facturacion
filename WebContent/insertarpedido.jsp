@@ -18,7 +18,7 @@
 		<input type="text" name="descripcion" required placeholder="" title=""> <br><br>
 		<label for="id"><span class="campolabel">Identificador Cliente/Servidor </span><span class="rojo">*</span></label>
 		<br>
-		<input type="number" name="id" required placeholder="" title="Introduzca un id Cliente/Servidor válido"> <br><br>
+		<input type="number" name="id" min="1" required placeholder="" title="Introduzca un id Cliente/Servidor válido"> <br><br>
 		<label for="idformapago"><span class="campolabel">Formas de Pago </span><span class="rojo">*</span></label>
 		<br>
 		<select name="idformapago" class="campolabel">
@@ -30,7 +30,7 @@
 		<br><br>		
 		<label for="total"><span class="campolabel">Total </span><span class="rojo">*</span></label>
 		<br>
-		<input type="number" name="total" class="campolabel" required placeholder="" title="Teclee un valor numérico"> <br><br>	
+		<input type="number" name="total" class="campolabel" min="1" step="0.05" required placeholder="0.00" title="Teclee un valor numérico"> <br><br>	
 		<label for="fecha"><span class="campolabel">Fecha </span><span class="rojo">*</span></label>
 		<br>
 		<input type="date" name="fecha" class="campolabel" required placeholder="" title="Introduzca una fecha válida"> <br><br>
@@ -55,14 +55,16 @@
 		<br><br>
 		<label for="importe_facturado"><span class="campolabel">Importe facturado </span><span class="rojo">*</span></label>
 		<br>
-		<input type="number" name="importe_facturado" class="campolabel" required placeholder="" title=""Teclee un importe facturado numérico""> <br><br>
+		<input type="number" name="importe_facturado" class="campolabel" min="1" step="0.05" required placeholder="0.00" title="Teclee un importe facturado numérico"> <br><br>
 		<input name="aceptarterminos" type="checkbox" required id="aceptarterminos" value=""><span id="terminos">Acepto los términos y condiciones de privacidad</span><br> <br>
 		<input type="submit" value="Enviar">
+		<br>
+		<input type="reset" value="Limpiar">
 	</form>	
+	</div>	
 	<br>
 	<a href="pedidos.jsp">Menú Pedidos</a>
 	<br>
 	<a href="menuprincipal.jsp">Menú principal</a>
-	</div>	
 </body>
 </html>

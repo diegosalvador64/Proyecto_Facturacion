@@ -19,10 +19,14 @@
 <jsp:forward page="servletservicio?op=1"/>
 <%} %>
 <form action="pedirunservicio.jsp" method ="post">
-<h3>Servicio:</h3><br><input type="number" name="idservicios"/>
+<h3>Servicio:</h3><br><input type="number" name="idservicios" min="1"/>
 <br>
 <br>
 <input type="submit" value="Buscar Servicio"/>
 </form>
+<br>
+	<a href="servicios.jsp">Menú Servicios</a>
+	<br>
+	<a href="menuprincipal.jsp">Menú principal</a>	
 </body>
 </html>

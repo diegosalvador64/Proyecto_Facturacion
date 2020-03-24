@@ -19,10 +19,14 @@
 <jsp:forward page="servletcontrato?op=1"/>
 <%} %>
 <form action="pediruncontrato.jsp" method ="post">
-<h3>Contrato:</h3><br><input type="number" name="idcontrato"/>
+<h3>Contrato:</h3><br><input type="number" name="idcontrato" min="1"/>
 <br>
 <br>
 <input type="submit" value="Buscar Contrato"/>
 </form>
+<br>
+	<a href="contratos.jsp">Menú Contratos</a>
+	<br>
+	<a href="menuprincipal.jsp">Menú principal</a>
 </body>
 </html>

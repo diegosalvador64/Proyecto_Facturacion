@@ -18,10 +18,10 @@
 		<input type="text" name="descripcion" required placeholder="" title="Rellene el campo"><br>
 		<label for="direccion"><span class="campolabel">Coste </span><span class="rojo">*</span></label>
 		<br>
-		<input type="number" name="coste" required placeholder="" title="Rellene el campo"><br>
+		<input type="number" name="coste" min="1" step="0.05" required placeholder="0.00" title="Rellene el campo"><br>
 		<label for="id"><span class="campolabel">Identificador Cliente/Proveedor </span><span class="rojo">*</span></label>
 		<br>
-		<input type="number" name="id" required placeholder="" title="Introduzca un id cliente/proveedor válido"> <br>
+		<input type="number" name="id" min="1" required placeholder="" title="Introduzca un id cliente/proveedor válido"> <br>
 		<label for="iva"><span class="campolabel">IVA </span><span class="rojo">*</span></label>
 		<br>
 		<select name="iva" class="campolabel">
@@ -34,12 +34,13 @@
 		<br>
 		<input name="aceptarterminos" type="checkbox" required id="aceptarterminos" value=""><span id="terminos">Acepto los términos y condiciones de privacidad</span> <br>
 		<input type="submit" value="Enviar">
-	</form>
+		<br>
+		<input type="reset" value="Limpiar">
+	</form>	
+	</div>
 	<br>
 	<a href="servicios.jsp">Menú Servicios</a>
 	<br>
-	<a href="menuprincipal.jsp">Menú principal</a>
-	
-	</div>	
+	<a href="menuprincipal.jsp">Menú principal</a>	
 </body>
 </html>

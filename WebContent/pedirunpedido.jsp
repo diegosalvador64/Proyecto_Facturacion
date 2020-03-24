@@ -19,10 +19,14 @@
 <jsp:forward page="servletpedido?op=1"/>
 <%} %>
 <form action="pedirunpedido.jsp" method ="post">
-<h3>Pedido:</h3><br><input type="number" name="idpedido"/><!-- este idpedido es el que se recoge en el servlet -->
+<h3>Pedido:</h3><br><input type="number" name="idpedido" min="1"/><!-- este idpedido es el que se recoge en el servlet -->
 <br>
 <br>
 <input type="submit" value="Buscar Pedido"/>
 </form>
+<br>
+	<a href="pedidos.jsp">Menú Pedidos</a>
+	<br>
+	<a href="menuprincipal.jsp">Menú principal</a>
 </body>
 </html>

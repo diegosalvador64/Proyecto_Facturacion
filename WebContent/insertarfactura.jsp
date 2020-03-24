@@ -15,10 +15,10 @@
 	<form action="servletfacturas?op=2" autocomplete="off" method="post">
 		 <label for="id"><span class="campolabel">Identificador Cliente/Servidor </span><span class="rojo">*</span></label>
 		<br>
-		<input type="number" name="id" required placeholder="" title="Introduzca un id Cliente/Servidor válido"> <br><br>
+		<input type="number" name="id" min="1" required placeholder="" title="Introduzca un id Cliente/Servidor válido"> <br><br>
 		<label for="idpedido"><span class="campolabel">Identificador Pedido </span><span class="rojo">*</span></label>
 		<br>
-		<input type="number" name="idpedido" required placeholder="" title="Introduzca un id pedido válido"> <br><br>
+		<input type="number" name="idpedido" min="1" required placeholder="" title="Introduzca un id pedido válido"> <br><br>
 		<label for="idservicios"><span class="campolabel">Servicios </span><span class="rojo">*</span></label>
 		<br>
 		<select name="idservicios" class="campolabel">
@@ -33,7 +33,7 @@
 		<br>
 		<label for="importe"><span class="campolabel">Importe </span><span class="rojo">*</span></label>
 		<br>
-		<input type="number" name="importe" class="campolabel" required placeholder="" title="Teclee un valor numérico"> <br>	
+		<input type="number" name="importe" min="1" step="0.05" class="campolabel" required placeholder="0.00" title="Teclee un valor numérico"> <br>	
 		<br>
 		<label for="idformapago"><span class="campolabel">Formas de Pago </span><span class="rojo">*</span></label>
 		<br>
@@ -54,11 +54,13 @@
 		<br><br>
 		<input name="aceptarterminos" type="checkbox" required id="aceptarterminos" value=""><span id="terminos">Acepto los términos y condiciones de privacidad</span><br> <br>
 		<input type="submit" value="Enviar">
+		<br>
+		<input type="reset" value="Limpiar">
 	</form>
+	</div>	
 	<br>
 	<a href="facturas.jsp">Menú Facturas</a>
 	<br>
 	<a href="menuprincipal.jsp">Menú principal</a>	
-	</div>	
 </body>
 </html>

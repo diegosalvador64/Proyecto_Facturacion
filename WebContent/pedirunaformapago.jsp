@@ -19,10 +19,14 @@
 <jsp:forward page="servletformaspago?op=1"/>
 <%} %>
 <form action="pedirunaformapago.jsp" method ="post">
-<h3>Formas de pago:</h3><br><input type="number" name="idformapago"/>
+<h3>Formas de pago:</h3><br><input type="number" name="idformapago" min="1"/>
 <br>
 <br>
 <input type="submit" value="Buscar Forma de Pago"/>
 </form>
+<br>
+	<a href="formaspago.jsp">Menú Formas de Pago</a>
+	<br>
+	<a href="menuprincipal.jsp">Menú principal</a>	
 </body>
 </html>

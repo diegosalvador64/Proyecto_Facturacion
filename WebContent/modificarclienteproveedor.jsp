@@ -15,7 +15,7 @@
 	<form action="servletfacturacion?op=4" autocomplete="off" method="post">
 
 		<label for="id"><span class="campolabel">Id cliente/proveedor </span> <span class="rojo">*</span></label><br><br>
-		<input type="number" name="id" value="" required placeholder="" autofocus title="Rellene el campo">
+		<input type="number" name="id" min="1" value="" required placeholder="" autofocus title="Rellene el campo">
 		<br>		
 		<label for="direccion"><span class="campolabel">Dirección </span><span class="rojo">*</span></label>
 		<br><br>
@@ -25,5 +25,9 @@
 		
 	</div>	
 </form>	
+<br>	
+	<a href="clienteproveedor.jsp">Menú Cliente-Proveedor</a>
+	<br>
+	<a href="menuprincipal.jsp">Menú principal</a>
 </body>
 </html>

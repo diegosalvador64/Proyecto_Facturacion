@@ -15,10 +15,10 @@
 		
 		<label for="id"><span class="campolabel">Identificador Cliente/Proveedor </span> <span class="rojo">*</span></label>
 		<br>
-		<input type="number" name="id" required placeholder="" title="Introduzca un id cliente/proveedor válido"> <br>
+		<input type="number" name="id" min="1" required placeholder="" title="Introduzca un id cliente/proveedor válido"> <br>
 		<label for="comision"><span class="campolabel">Comisión </span><span class="rojo">*</span></label>
 		<br>
-		<input type="number" name="comision" required placeholder="" title=""> <br>
+		<input type="number" name="comision" min="1" step="0.05" required placeholder="0.00" title=""> <br>
 		<label for="encargadofacturacion"><span class="campolabel">Encargado de facturación </span><span class="rojo">*</span></label>
 		<br>
 		<select name="encargadofacturacion" class="campolabel">
@@ -29,11 +29,13 @@
 		<br>	
 		<input name="aceptarterminos" type="checkbox" required id="aceptarterminos" value=""><span id="terminos">Acepto los términos y condiciones de privacidad</span> <br>
 		<input type="submit" value="Enviar">
+		<br>
+		<input type="reset" value="Limpiar">
 	</form>	
+	</div>	
 	<br>
 	<a href="contratos.jsp">Menú Contratos</a>
 	<br>
 	<a href="menuprincipal.jsp">Menú principal</a>
-	</div>	
 </body>
 </html>
